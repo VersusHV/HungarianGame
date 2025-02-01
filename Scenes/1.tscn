@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cq3xls4y6tgfq"]
+[gd_scene load_steps=8 format=3 uid="uid://cq3xls4y6tgfq"]
 
 [ext_resource type="PackedScene" uid="uid://ck1x8ka8uui81" path="res://Scenes/player.tscn" id="1_0nqo4"]
+[ext_resource type="PackedScene" uid="uid://c213nb8uopc0f" path="res://BlenderModels/ModelTest.blend" id="2_qyvbq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l2daf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -43,3 +44,6 @@ shape = SubResource("ConcavePolygonShape3D_u5fsl")
 
 [node name="Player" parent="." instance=ExtResource("1_0nqo4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
+
+[node name="ModelTest" parent="." instance=ExtResource("2_qyvbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.753, 1, -4.129)
