@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cq3xls4y6tgfq"]
+[gd_scene load_steps=9 format=3 uid="uid://cq3xls4y6tgfq"]
 
 [ext_resource type="PackedScene" uid="uid://ck1x8ka8uui81" path="res://Scenes/player.tscn" id="1_0nqo4"]
 [ext_resource type="PackedScene" uid="uid://c213nb8uopc0f" path="res://BlenderModels/ModelTest.blend" id="2_qyvbq"]
+[ext_resource type="PackedScene" uid="uid://y08aw57xpwk5" path="res://BlenderModels/Chair.blend" id="3_hhycj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l2daf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -47,3 +48,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
 
 [node name="ModelTest" parent="." instance=ExtResource("2_qyvbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.753, 1, -4.129)
+
+[node name="Chair" parent="." instance=ExtResource("3_hhycj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90174, 1.9284, -3.4808)
