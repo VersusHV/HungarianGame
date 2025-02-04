@@ -1,0 +1,103 @@
+[gd_scene load_steps=16 format=3 uid="uid://ba30mn864f0ob"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_77phl"]
+size = Vector2(20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqosg"]
+albedo_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8lrio"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cn8ib"]
+size = Vector2(20, 2)
+orientation = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7wqty"]
+albedo_color = Color(0.647059, 1, 0.458824, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h7d4l"]
+data = PackedVector3Array(0, -1, -10, 0, -1, 10, 0, 1, -10, 0, -1, 10, 0, 1, 10, 0, 1, -10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7edc1"]
+flip_faces = true
+size = Vector2(20, 2)
+orientation = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pukrt"]
+albedo_color = Color(0.509804, 1, 0.980392, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_avyv1"]
+data = PackedVector3Array(0, -1, 10, 0, -1, -10, 0, 1, -10, 0, 1, 10, 0, -1, 10, 0, 1, -10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tx55o"]
+size = Vector2(20, 2)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vgor6"]
+albedo_color = Color(1, 1, 0.521569, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y8fgs"]
+data = PackedVector3Array(10, -1, 0, -10, -1, 0, 10, 1, 0, -10, -1, 0, -10, 1, 0, 10, 1, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d8hd4"]
+flip_faces = true
+size = Vector2(20, 2)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c6qs"]
+albedo_color = Color(0.780392, 0.458824, 0.290196, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_j171o"]
+data = PackedVector3Array(-10, -1, 0, 10, -1, 0, 10, 1, 0, -10, 1, 0, -10, -1, 0, 10, 1, 0)
+
+[node name="Arena" type="Node3D"]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_77phl")
+surface_material_override/0 = SubResource("StandardMaterial3D_hqosg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8lrio")
+
+[node name="-x wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 0)
+mesh = SubResource("PlaneMesh_cn8ib")
+surface_material_override/0 = SubResource("StandardMaterial3D_7wqty")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="-x wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-x wall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h7d4l")
+
+[node name="+x wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 0)
+mesh = SubResource("PlaneMesh_7edc1")
+surface_material_override/0 = SubResource("StandardMaterial3D_pukrt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="+x wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="+x wall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_avyv1")
+
+[node name="-z wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10)
+mesh = SubResource("PlaneMesh_tx55o")
+surface_material_override/0 = SubResource("StandardMaterial3D_vgor6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="-z wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="-z wall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_y8fgs")
+
+[node name="+z wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10)
+mesh = SubResource("PlaneMesh_d8hd4")
+surface_material_override/0 = SubResource("StandardMaterial3D_8c6qs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="+z wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="+z wall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_j171o")
