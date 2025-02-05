@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c40chdmxw6tq1"]
+
+[ext_resource type="FontFile" uid="uid://do5i6p2vaq14t" path="res://interface/theme/font/defult_font.tres" id="1_iv80b"]
+[ext_resource type="FontFile" uid="uid://iqyjm0r54xvy" path="res://interface/theme/font/Comfortaa-Bold.ttf" id="2_57vg5"]
+
+[resource]
+default_font = ExtResource("2_57vg5")
+default_font_size = 20
+Label/colors/font_color = Color(0.968627, 1, 0, 1)
+Label/font_sizes/font_size = 48
+Label/fonts/font = ExtResource("1_iv80b")

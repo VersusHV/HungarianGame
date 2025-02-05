@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtqfdx3oprnkk"]
+
+[ext_resource type="PackedScene" uid="uid://cfp5xepyp5gwi" path="res://interface/bar/exp_bar/exp_bar.tscn" id="1_f84la"]
+[ext_resource type="PackedScene" uid="uid://blk7muivh8weu" path="res://interface/bar/hp_bar/hp_bar.tscn" id="2_oapx1"]
+[ext_resource type="PackedScene" uid="uid://c1gc84h4qiavk" path="res://interface/counter/New2/new_2_counter.tscn" id="3_b4556"]
+[ext_resource type="PackedScene" uid="uid://ro2ms7wld7ef" path="res://interface/counter/New1/new_1_counter.tscn" id="4_44q5r"]
+
+[node name="interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bars" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -394.0
+offset_bottom = 144.0
+grow_horizontal = 0
+
+[node name="hp_bar" parent="Bars" instance=ExtResource("2_oapx1")]
+layout_mode = 2
+
+[node name="exp_bar" parent="Bars" instance=ExtResource("1_f84la")]
+layout_mode = 2
+
+[node name="Points" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 140.0
+offset_bottom = 40.0
+
+[node name="New2_counter" parent="Points" instance=ExtResource("3_b4556")]
+layout_mode = 2
+
+[node name="New1_counter" parent="Points" instance=ExtResource("4_44q5r")]
+layout_mode = 2

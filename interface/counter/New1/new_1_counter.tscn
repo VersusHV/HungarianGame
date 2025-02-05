@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ro2ms7wld7ef"]
+
+[ext_resource type="PackedScene" uid="uid://dr7iry7bp1l2e" path="res://interface/counter/counter.tscn" id="1_13p5q"]
+
+[node name="New1_counter" instance=ExtResource("1_13p5q")]

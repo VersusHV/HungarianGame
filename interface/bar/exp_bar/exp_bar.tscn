@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfp5xepyp5gwi"]
+
+[ext_resource type="PackedScene" uid="uid://c83iu5qnreblq" path="res://interface/bar/bar.tscn" id="1_i552g"]
+[ext_resource type="Texture2D" uid="uid://d05o5s0d0vj7" path="res://interface/bar/exp_bar/exp_icon.png" id="2_dx1w8"]
+[ext_resource type="Texture2D" uid="uid://dlhqckcbokx53" path="res://interface/bar/exp_bar/bar_exp_fill.png" id="3_vwjdb"]
+
+[node name="exp_bar" instance=ExtResource("1_i552g")]
+
+[node name="icon1" parent="counter" index="0"]
+offset_bottom = 43.0
+texture = ExtResource("2_dx1w8")
+
+[node name="TextureProgressBar" parent="." index="1"]
+texture_progress = ExtResource("3_vwjdb")
+
+[editable path="counter"]

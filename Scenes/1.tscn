@@ -1,6 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cq3xls4y6tgfq"]
 
 [ext_resource type="PackedScene" uid="uid://ck1x8ka8uui81" path="res://Scenes/player.tscn" id="1_0nqo4"]
+[ext_resource type="PackedScene" uid="uid://ba30mn864f0ob" path="res://Scenes/arena.tscn" id="1_2hp0t"]
+[ext_resource type="PackedScene" uid="uid://dtqfdx3oprnkk" path="res://Scenes/interface.tscn" id="1_hv4aj"]
 [ext_resource type="PackedScene" uid="uid://y08aw57xpwk5" path="res://BlenderModels/Chair.blend" id="2_mdfkq"]
 [ext_resource type="PackedScene" uid="uid://c213nb8uopc0f" path="res://BlenderModels/ModelTest.blend" id="3_qtgiv"]
 
@@ -17,13 +19,9 @@ sky = SubResource("Sky_2detq")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_fw1ne"]
-size = Vector2(10, 10)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_u5fsl"]
-data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
-
 [node name="Node3D" type="Node3D"]
+
+[node name="Arena" parent="." instance=ExtResource("1_2hp0t")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ann86")
@@ -32,19 +30,13 @@ environment = SubResource("Environment_ann86")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("PlaneMesh_fw1ne")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_u5fsl")
-
 [node name="Player" parent="." instance=ExtResource("1_0nqo4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="interface" parent="Player/Camera3D" instance=ExtResource("1_hv4aj")]
 
 [node name="Chair" parent="." instance=ExtResource("2_mdfkq")]
 transform = Transform3D(0.915866, 0, 0.401484, 0, 1, 0, -0.401484, 0, 0.915866, -3.05748, 1.93391, -1.95295)

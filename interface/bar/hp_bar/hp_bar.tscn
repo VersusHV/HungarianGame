@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://blk7muivh8weu"]
+
+[ext_resource type="PackedScene" uid="uid://c83iu5qnreblq" path="res://interface/bar/bar.tscn" id="1_beul1"]
+
+[node name="hp_bar" instance=ExtResource("1_beul1")]
+
+[editable path="counter"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr7iry7bp1l2e"]
+
+[ext_resource type="Texture2D" uid="uid://bnqdsicm7sbtg" path="res://interface/counter/label_bg.png" id="1_8itjx"]
+[ext_resource type="Texture2D" uid="uid://xb3axub8813u" path="res://interface/counter/ikona1.png" id="2_h5a68"]
+[ext_resource type="Theme" uid="uid://c40chdmxw6tq1" path="res://interface/theme/default_theme.tres" id="3_kbyb8"]
+
+[node name="counter" type="NinePatchRect"]
+custom_minimum_size = Vector2(200, 70)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1720.0
+offset_bottom = -930.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8itjx")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="icon1" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -31.0
+offset_right = -24.0
+offset_bottom = 31.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_h5a68")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -61.0
+offset_right = 105.0
+offset_bottom = 61.0
+grow_vertical = 2
+theme = ExtResource("3_kbyb8")
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1

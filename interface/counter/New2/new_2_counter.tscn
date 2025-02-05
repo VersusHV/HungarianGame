@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1gc84h4qiavk"]
+
+[ext_resource type="PackedScene" uid="uid://dr7iry7bp1l2e" path="res://interface/counter/counter.tscn" id="1_feruc"]
+[ext_resource type="Texture2D" uid="uid://uqsm5pjlha4k" path="res://interface/counter/ikona2.png" id="2_13cnv"]
+
+[node name="New2_counter" instance=ExtResource("1_feruc")]
+
+[node name="icon1" parent="." index="0"]
+offset_left = -94.0
+offset_right = -32.0
+texture = ExtResource("2_13cnv")
