@@ -1,99 +1,129 @@
-[gd_scene load_steps=5 format=3 uid="uid://bb6sgjtyi1ye6"]
+[gd_scene load_steps=10 format=3 uid="uid://cq2a5npna8fbb"]
 
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_ioiq1"]
-[ext_resource type="Theme" uid="uid://dt02r2kvbc2wa" path="res://Themes/menu_theme.tres" id="2_ykcu7"]
+[ext_resource type="Texture2D" uid="uid://sma2pg50xptv" path="res://Assets/menu_bg.png" id="1_0m47t"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_ys2kv"]
 
-[sub_resource type="Theme" id="Theme_i1uwu"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_84l3w"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0hjk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfm3l"]
+bg_color = Color(0.907942, 0.907942, 0.907942, 1)
+border_width_bottom = 10
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6qsx"]
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 10
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icxby"]
+bg_color = Color(0.960351, 0.960351, 0.960351, 1)
+border_width_bottom = 10
+border_color = Color(0.728822, 0.728822, 0.728822, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_cshns"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_84l3w")
+Button/styles/hover = SubResource("StyleBoxFlat_rfm3l")
+Button/styles/normal = SubResource("StyleBoxFlat_g6qsx")
+Button/styles/pressed = SubResource("StyleBoxFlat_icxby")
+
+[sub_resource type="Theme" id="Theme_sy4ik"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4of6"]
+bg_color = Color(0, 0, 0, 0.415686)
+draw_center = false
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
 
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -2.0
-offset_right = 1.0
-offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ioiq1")
+theme = SubResource("Theme_cshns")
+script = ExtResource("1_ys2kv")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.711134, 0.841932, 0.863259, 1)
+texture = ExtResource("1_0m47t")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -241.0
-offset_top = -124.445
-offset_right = 241.0
-offset_bottom = 213.555
+offset_left = -252.0
+offset_top = -81.405
+offset_right = 237.0
+offset_bottom = 219.595
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_i1uwu")
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+theme = SubResource("Theme_sy4ik")
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4of6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
 size_flags_vertical = 4
-size_flags_stretch_ratio = 0.0
-theme_override_constants/separation = 30
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 25
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 90)
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
-theme = ExtResource("2_ykcu7")
-theme_override_constants/outline_size = -610
-theme_override_font_sizes/font_size = 44
-text = "PLAY"
+theme_override_constants/separation = 50
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 90)
+[node name="Start" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme = ExtResource("2_ykcu7")
-theme_override_constants/outline_size = -610
-theme_override_font_sizes/font_size = 44
-text = "QUIT
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Start Game"
+
+[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Exit
 "
 
-[node name="Label" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
 offset_left = -409.0
-offset_top = -332.65
+offset_top = 288.83
 offset_right = 409.0
-offset_bottom = -195.65
+offset_bottom = 425.83
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.184314, 0.596078, 0.792157, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.847059)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/shadow_offset_x = 4
-theme_override_constants/shadow_offset_y = 4
-theme_override_constants/shadow_outline_size = 10
-theme_override_font_sizes/font_size = 120
-theme_override_styles/normal = SubResource("StyleBoxEmpty_m0hjk")
+theme_override_font_sizes/font_size = 100
 text = "Hungarian Game"
-horizontal_alignment = 1
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_start_game_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
