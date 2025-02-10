@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://0687qscgqvuu"]
+
+[ext_resource type="PackedScene" uid="uid://cs7846m4odnmu" path="res://Scenes/Traning_arena/traning_arena.tscn" id="1_0ofio"]
+[ext_resource type="PackedScene" uid="uid://ck1x8ka8uui81" path="res://Scenes/Player/player.tscn" id="2_ygro6"]
+
+[sub_resource type="Environment" id="Environment_xg05l"]
+
+[node name="Test_level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xg05l")
+
+[node name="Traning_arena" parent="." instance=ExtResource("1_0ofio")]
+top_level = true
+
+[node name="Player" parent="." instance=ExtResource("2_ygro6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317115, 1.5, 1.03117)
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.92753, 0.373749, 0, -0.373749, 0.92753, 0.305224, 2.6604, 2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.992104, -0.00937767, -0.125069, 0.12542, 0.0741796, 0.989326, 1.32152e-09, -0.997201, 0.07477, 17.9604, 40.4365, 0)
+shadow_enabled = true

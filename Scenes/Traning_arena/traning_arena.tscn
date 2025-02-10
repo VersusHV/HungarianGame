@@ -1,0 +1,327 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs7846m4odnmu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3tt1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ywe3c"]
+albedo_color = Color(0, 1, 0, 1)
+
+[node name="Traning_arena" type="Node3D"]
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049, -1, 0.021)
+use_collision = true
+size = Vector3(100, 2, 100)
+material = SubResource("StandardMaterial3D_o3tt1")
+
+[node name="Ramps" type="Node" parent="."]
+
+[node name="Ramp10" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 0.176, 5, 0, 0, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp10"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 0, -4.37114e-08, 1.142, 0, -1)
+text = "10°"
+font_size = 64
+
+[node name="Ramp15" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 3, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 0.268, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp15"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 0, -4.37114e-08, 1.142, 0, -1)
+text = "15°"
+font_size = 64
+
+[node name="Ramp20" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 6, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 0.364, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp20"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 0, -4.37114e-08, 1.14209, 0, -1)
+text = "20°"
+font_size = 64
+
+[node name="Ramp25" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 9, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 0.466, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp25"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 0, -4.37114e-08, 1.14209, 0, -1)
+text = "25°"
+font_size = 64
+
+[node name="Ramp30" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 12, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 0.577, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp30"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 0, -4.37114e-08, 1.14209, 0, -1)
+text = "30°"
+font_size = 64
+
+[node name="Ramp35" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 15, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 0.7, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp35"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 0, -4.37114e-08, 1.14209, 0, -1)
+text = "35°"
+font_size = 64
+
+[node name="Ramp40" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 18, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 0.839, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp40"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 0, -4.37114e-08, 1.14209, 0, -1)
+text = "40°"
+font_size = 64
+
+[node name="Ramp45" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 21, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 1, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp45"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 0, -4.37114e-08, 1.14209, 0, -1)
+text = "45°"
+font_size = 64
+
+[node name="Ramp50" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 24, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 1.192, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp50"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 4.23516e-22, -4.37114e-08, 1.10275, -0.00510979, -1)
+text = "50°"
+font_size = 64
+
+[node name="Ramp55" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 27, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 1.428, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp55"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 4.23516e-22, -4.37114e-08, 1.10275, -0.00510979, -1)
+text = "55°"
+font_size = 64
+
+[node name="Ramp60" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 30, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 1.732, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp60"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 4.23516e-22, -4.37114e-08, 1.10275, -0.00510979, -1)
+text = "60°"
+font_size = 64
+
+[node name="Ramp65" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 33, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 2.145, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp65"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 4.23516e-22, -4.37114e-08, 1.10275, -0.00510979, -1)
+text = "65°"
+font_size = 64
+
+[node name="Ramp70" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 36, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 2.747, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp70"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 4.23516e-22, -4.37114e-08, 1.10275, -0.00510979, -1)
+text = "70°"
+font_size = 64
+
+[node name="Ramp75" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 39, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 3.732, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp75"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 4.23516e-22, -4.37114e-08, 1.10275, -0.00510979, -1)
+text = "75°"
+font_size = 64
+
+[node name="Ramp80" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 42, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 5.671, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp80"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 4.23516e-22, -4.37114e-08, 1.10275, -0.00510979, -1)
+text = "80°"
+font_size = 64
+
+[node name="Ramp85" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 45, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 11.43, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp85"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 4.23516e-22, -4.37114e-08, 1.10275, -0.00510979, -1)
+text = "85°"
+font_size = 64
+
+[node name="Ramp89" type="CSGPolygon3D" parent="Ramps"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 48.023, 0, -40)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 5, 57.29, 5, 0, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_ywe3c")
+
+[node name="Label3D" type="Label3D" parent="Ramps/Ramp89"]
+transform = Transform3D(6.38959e-15, 3.34414, -1.46177e-07, 4.37114e-08, -4.37114e-08, -1, -1, 4.23516e-22, -4.37114e-08, 1.10275, -0.00510979, -1.18876)
+text = "89°"
+font_size = 64
+
+[node name="Jumps" type="Node" parent="."]
+
+[node name="box010" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.05, -40.5)
+use_collision = true
+size = Vector3(1, 0.1, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box010"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.10
+"
+font_size = 64
+
+[node name="box015" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.075, -40.5)
+use_collision = true
+size = Vector3(1, 0.15, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box015"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.15
+"
+font_size = 64
+
+[node name="box020" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0.1, -40.5)
+use_collision = true
+size = Vector3(1, 0.2, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box020"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.2"
+font_size = 64
+
+[node name="box025" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.125, -40.5)
+use_collision = true
+size = Vector3(1, 0.25, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box025"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.25"
+font_size = 64
+
+[node name="box030" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0.15, -40.5)
+use_collision = true
+size = Vector3(1, 0.3, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box030"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.30"
+font_size = 64
+
+[node name="box035" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0.175, -40.5)
+use_collision = true
+size = Vector3(1, 0.35, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box035"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.35"
+font_size = 64
+
+[node name="box040" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0.2, -40.5)
+use_collision = true
+size = Vector3(1, 0.4, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box040"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.40"
+font_size = 64
+
+[node name="box045" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.225, -40.5)
+use_collision = true
+size = Vector3(1, 0.45, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box045"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.45
+"
+font_size = 64
+
+[node name="box050" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0.25, -40.5)
+use_collision = true
+size = Vector3(1, 0.5, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box050"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.50
+"
+font_size = 64
+
+[node name="box055" type="CSGBox3D" parent="Jumps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.275, -40.5)
+use_collision = true
+size = Vector3(1, 0.55, 1)
+
+[node name="Label3D" type="Label3D" parent="Jumps/box055"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "0.55
+"
+font_size = 64
