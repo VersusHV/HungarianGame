@@ -325,3 +325,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
 text = "0.55
 "
 font_size = 64
+
+[node name="box011" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0852823, 0.05, -3.81715)
+use_collision = true
+size = Vector3(1, 0.1, 1)
+
+[node name="Hello" type="Label3D" parent="box011"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.142, 0.51)
+text = "HELLO
+"
+font_size = 64

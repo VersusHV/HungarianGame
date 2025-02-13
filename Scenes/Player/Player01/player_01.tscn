@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmevbnqpla6a7"]
+
+[ext_resource type="PackedScene" uid="uid://d1v4802j3pec1" path="res://BlenderModels/PLAYER01.blend" id="1_af0yd"]
+
+[node name="PLAYER01" instance=ExtResource("1_af0yd")]
+transform = Transform3D(0.5, 0, 0, 0, 0.571, 0, 0, 0, 0.604, 0, 0, 0)
+
+[node name="Armature" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.772318, 0, 0, 0, 1, 0, 4.50571, 0)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/2/rotation = Quaternion(2.66925e-08, -2.66925e-08, 0.707107, 0.707107)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/rotation = Quaternion(2.66925e-08, 2.66925e-08, -0.707107, 0.707107)
+bones/7/rotation = Quaternion(-2.66925e-08, -2.66925e-08, 0.707107, 0.707107)
+bones/9/rotation = Quaternion(2.66925e-08, -2.66925e-08, 0.707107, 0.707107)
+bones/10/rotation = Quaternion(-2.66925e-08, 2.66925e-08, -0.707107, 0.707107)
+bones/12/rotation = Quaternion(2.66925e-08, 2.66925e-08, -0.707107, 0.707107)
+bones/13/rotation = Quaternion(-2.66925e-08, -2.66925e-08, 0.707107, 0.707107)

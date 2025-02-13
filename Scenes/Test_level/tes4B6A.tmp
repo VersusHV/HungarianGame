@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://0687qscgqvuu"]
 
 [ext_resource type="PackedScene" uid="uid://cs7846m4odnmu" path="res://Scenes/Traning_arena/traning_arena.tscn" id="1_0ofio"]
-[ext_resource type="PackedScene" uid="uid://bg6rnkhyc1lc4" path="res://Scenes/Player/Player01/character.tscn" id="2_m0p0r"]
+[ext_resource type="PackedScene" uid="uid://cmevbnqpla6a7" path="res://Scenes/Player/player_01.tscn" id="2_es23p"]
 
 [sub_resource type="Environment" id="Environment_xg05l"]
 
@@ -15,11 +15,6 @@ top_level = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.992104, -0.00937767, -0.125069, 0.12542, 0.0741796, 0.989326, 1.32152e-09, -0.997201, 0.07477, 17.9604, 40.4365, 0)
-light_energy = 0.5
 shadow_enabled = true
 
-[node name="Node3D" parent="." instance=ExtResource("2_m0p0r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.110624, 0.416098, 0.112723)
-
-[editable path="Node3D"]
-[editable path="Node3D/PLAYER01"]
+[node name="PLAYER01" parent="." instance=ExtResource("2_es23p")]

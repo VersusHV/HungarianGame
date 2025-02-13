@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg6rnkhyc1lc4"]
+
+[ext_resource type="PackedScene" uid="uid://d1v4802j3pec1" path="res://BlenderModels/PLAYER01.blend" id="1_bj11f"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_ckaw7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7blwf"]
+
+[node name="Node3D" type="CharacterBody3D"]
+script = ExtResource("1_ckaw7")
+
+[node name="PLAYER01" parent="." instance=ExtResource("1_bj11f")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Skeleton3D" parent="PLAYER01/Armature" index="0"]
+bones/7/rotation = Quaternion(-2.66925e-08, -2.66925e-08, 0.707107, 0.707107)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_7blwf")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.820212, 0.57206, 0, -0.57206, 0.820212, 0, 2, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 0.992193, -0.12471, 0, 0.12471, 0.992193, 0, 0, 0)
+spring_length = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[editable path="PLAYER01"]
